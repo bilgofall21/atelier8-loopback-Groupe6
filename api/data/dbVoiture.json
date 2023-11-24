@@ -1,0 +1,12 @@
+{
+  "ids": {
+    "Voiture": 5
+  },
+  "models": {
+    "Voiture": {
+      "1": "{\"marque\":\"Mercedes\",\"prix\":0,\"description\":\"Une automobile, ou voiture, est un véhicule terrestre se propulsant lui-même à l'aide d'un moteur.\",\"image\":\"https://i.gaw.to/content/photos/41/09/410908_2021_Mercedes-Benz_GLE-Class.jpg?1024x640\",\"idVoiture\":1}",
+      "2": "{\"marque\":\"BMW\",\"prix\":3248579657,\"description\":\"Ce véhicule est conçu pour le transport terrestre de personnes ou de marchandises, elle est équipée en conséquence.\",\"image\":\"https://cdna.artstation.com/p/assets/images/images/016/067/862/large/fabio-puddu-bmw-m4-cs-20205120x2880-025.jpg?1550763409\",\"idVoiture\":2}",
+      "4": "{\"marque\":\"BMW\",\"prix\":0,\"description\":\"Une automobile, ou voiture, est un véhicule terrestre se propulsant lui-même à l'aide d'un moteur. \",\"image\":\"https://img.freepik.com/photos-gratuite/berline-argentee-feux-rouges-garee-port_114579-4385.jpg?w=826&t=st=1700843254~exp=1700843854~hmac=7fa954553c50cbb434993e0273c8058833256c5fd8bb356b9531c750f2a20faa\",\"idVoiture\":4}"
+    }
+  }
+}

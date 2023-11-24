@@ -1,0 +1,62 @@
+<div class="container mt-5">
+    <button class="btn btn-info mb-5 text-white" data-bs-toggle="modal" data-bs-target="#modalAjoutVoiture">Ajouter Voiture</button>
+    <div class="row row-gap-4">
+        <div class="col-md-4 col-12 " *ngFor="let voiture of voitures ">
+            <div class="card container-card">
+                <div class="wrapper">
+                    <div class="banner-image"> <img src="{{voiture.image}}" alt=""></div>
+                    <h1> {{voiture.marque}}</h1>
+                    <p>{{voiture.description}}</p>
+                </div>
+                <div class="button-wrapper">
+                    <button class="btn outline">DETAILS</button>
+                    <button class="btn fill">BUY NOW</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="modalAjoutVoiture" tabindex="-1" aria-labelledby="modalAjoutVoitureLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Ajouter Voiture</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="mb-4">
+                        <label for="inputImage" class="form-label fw-bold">Image</label>
+                        <input type="text" name="imageUrl" class="form-control" id="inputImage" placeholder="Entrez l'url d'une image"
+                            [(ngModel)]="imageUrl">
+                    </div>
+                    <div class="mb-4">
+                        <label for="inputMarque" class="form-label fw-bold">Marque</label>
+                        <input type="text" name="marque" class="form-control" id="inputMarque" placeholder="Entrez le marque"
+                            [(ngModel)]="marque">
+                    </div>
+                    <div class="mb-4">
+                        <label for="inputDescription" class="form-label fw-bold">Description</label>
+                        <div class="form-floating">
+                            <textarea class="form-control" placeholder="description" name="description" id="description"
+                                [(ngModel)]="description"></textarea>
+                        </div>
+                    </div>
+                    <div class="mb-4">
+                        <label for="inputPrix" class="form-label fw-bold">Prix</label>
+                        <input type="text" name="prix" class="form-control" id="inputprix" placeholder="Entrez le prix"
+                            [(ngModel)]="prix">
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
