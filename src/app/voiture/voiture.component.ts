@@ -8,17 +8,24 @@ import { ApiServiceService } from '../services/api-service.service';
 })
 export class VoitureComponent implements OnInit {
 
+  
+
   // attributs
   voitures: any[] = [];
   imageUrl: string = ""; 
   description: string = "";
   marque: string = "";
   prix: string = "";
+  auto: any;
+
+ 
+
   
   constructor(private voitureService: ApiServiceService) { }
 
   ngOnInit(): void {
     this.afficherVoiture();
+    
   }
   
   afficherVoiture() {
@@ -28,7 +35,19 @@ export class VoitureComponent implements OnInit {
     });
   }
 
-  
+  ajoutVoiture(){
+    this.voitureService.ajouterVoiture(this.auto).subscribe((data:any)=>{
+      this.auto={
+        marque:this.marque,
+        prix:this.prix,
+        image:this.imageUrl,
+        desciption:this.description 
+      }
+      this.voitures.push(this.auto)
+      
+      
+    })
+  }
 
   
 
