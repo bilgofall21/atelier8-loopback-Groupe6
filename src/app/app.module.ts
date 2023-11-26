@@ -6,11 +6,13 @@ import { AppComponent } from './app.component';
 import { VoitureComponent } from './voiture/voiture.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    VoitureComponent
+    VoitureComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,

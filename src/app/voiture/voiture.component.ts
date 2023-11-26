@@ -17,8 +17,9 @@ export class VoitureComponent implements OnInit {
   marque: string = "";
   prix: string = "";
   auto: any;
+  voitureChoisi: any;
+  idVoiture:any;
 
- 
 
   
   constructor(private voitureService: ApiServiceService) { }
@@ -34,22 +35,54 @@ export class VoitureComponent implements OnInit {
       console.log(this.voitures);
     });
   }
-
+  
+  
   ajoutVoiture(){
+    this.auto={
+      marque:this.marque,
+      prix: parseInt(this.prix),
+      image:this.imageUrl,
+      description:this.description 
+    }
     this.voitureService.ajouterVoiture(this.auto).subscribe((data:any)=>{
-      this.auto={
-        marque:this.marque,
-        prix:this.prix,
-        image:this.imageUrl,
-        desciption:this.description 
-      }
-      this.voitures.push(this.auto)
-      
-      
+    window.location.reload();
+        
     })
   }
 
-  
+  chargerInfo(id: any) {
+    this.voitures.forEach(element => {
+      if (element.idVoiture == id) {
+        this.voitureChoisi=element
+        this.marque = element.marque;
+        this.description = element.description;
+        this.prix = element.prix;
+        this.imageUrl = element.image;
+      }
+    });
+  }
+
+  modifVoiture(){
+    
+   let newVoiture={
+      marque:this.marque,
+      prix:parseInt(this.prix),
+      image:this.imageUrl,
+      description:this.description
+    }
+    this.voitureService.modifierVoiture(this.voitureChoisi.idVoiture, newVoiture) .subscribe((reponse:any)=>{
+      console.log(`modification reussi : ${reponse}`);
+      window.location.reload()
+    }) 
+  }
+
+  suppression(id: any) {
+    this.voitureService.supprimerVoiture(id).subscribe(
+      (reponse:any) => {
+        console.log(`Suppression de ${reponse.prix} reussie !`);
+      })
+    window.location.reload();
+  }
 
 
 }

@@ -7,7 +7,7 @@ import { HttpClient } from '@angular/common/http';
 
 
 export class ApiServiceService {
-  path:string='./voiture';
+  
 
   url = 'http://[::1]:3000/voitures';
 
@@ -19,5 +19,14 @@ export class ApiServiceService {
   
   ajouterVoiture(voiture:any){
     return this.http.post(this.url, voiture);
+  }
+
+  modifierVoiture(id:any, voiture:any){
+    return this.http.put(`${this.url}/${id}`, voiture)
+  }
+ 
+
+  supprimerVoiture(id: any) {
+    return this.http.delete(`${this.url}/${id}`)
   }
 }
