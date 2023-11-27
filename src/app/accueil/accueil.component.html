@@ -4,7 +4,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Responsive Website Homepage HTML and CSS | CodingNepal</title>
+    <title>Gestion voiture</title>
     <!-- <link rel="stylesheet" href="style.css" /> -->
   </head>
   <body>
@@ -18,11 +18,11 @@
           </svg>
         </label>
         <ul class="links">
-          <li><a href="#">Home</a></li>
-          <li><a href="#">About Us</a></li>
+          <li><a href="#">Accueil</a></li>
+          <li><a href="#">A propos</a></li>
           <li><a href="#">Services</a></li>
-          <li><a href="#">Portfolio</a></li>
-          <li><a href="#">Contact Us</a></li>
+          <!-- <li><a href="#">Portfolio</a></li> -->
+          <li><a href="#">contactez-nous</a></li>
         </ul>
         <div class="buttons">
           <a href="#" class="signup" [routerLink]="['/login']">Connexion</a>
@@ -45,11 +45,11 @@
     
 </body>
 <div class="cartes m-5">
-    <h3 class="text-center"> Nos offres </h3>
+    <h3 class="text-center"> Nos offres du moment</h3>
     <span class="soulignement"></span>
-   <div class="row row-gap-4">
+   <div class="row row-gap-4" id="grid">
        <div class="col-md-4 col-12 " *ngFor="let voiture of voitures ">
-           <div class="card container-card">
+           <div class="card container-card ">
                <div class="wrapper">
                    <div class="banner-image"> <img src="{{voiture.image}}" alt=""></div>
                    <h3 class="text-dark"> {{voiture.marque}}</h3>
@@ -63,4 +63,9 @@
        </div>
    </div>
 </div>
+<footer class="footer mt-auto py-3 mt-5" style="background-color: #056D86;">
+  <div class="container text-center">
+    <span class="text-light">Copyrights © 2023 powered by G-6. All Rights Reserved.</span>
+  </div>
+</footer>
 </html>

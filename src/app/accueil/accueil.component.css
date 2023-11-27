@@ -16,7 +16,7 @@ body {
 }
 
 .header {
-  position: fixed;
+  position: scroll;
   top: 0;
   left: 0;
   width: 100%;
@@ -137,6 +137,7 @@ body {
 .hero{
     /* border: 1px solid red; */
     margin-left: -600px;
+    margin-top: -30vh;
 }
 
 .buttons .join {
@@ -253,8 +254,8 @@ h1 {
     transition: all .3s ease;
 }
 .soulignement{
-    width: 10vh;
-    margin: 0 auto 20px;
+    width: 20vh;
+    margin: 5px auto 20px;
     display: block;
     background-color:#60B8C4 ;
     height: 3px;
