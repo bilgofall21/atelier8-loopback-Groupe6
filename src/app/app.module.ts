@@ -7,12 +7,14 @@ import { VoitureComponent } from './voiture/voiture.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { LoginComponent } from './login/login.component';
+import { AccueilComponent } from './accueil/accueil.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     VoitureComponent,
-    LoginComponent
+    LoginComponent,
+    AccueilComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<!-- Coding By CodingNepal - www.codingnepalweb.com -->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Website Homepage HTML and CSS | CodingNepal</title>
+    <!-- <link rel="stylesheet" href="style.css" /> -->
+  </head>
+  <body>
+    <header class="header">
+      <nav class="navbar">
+        <h2 class="logo"><img src="assets/Black_and_Green_Modern_Automotive_Logo-removebg-preview.png" alt="" width="125px" height="100px"></h2>
+        <input type="checkbox" id="menu-toggle" />
+        <label for="menu-toggle" id="hamburger-btn">
+          <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24">
+            <path d="M3 12h18M3 6h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </label>
+        <ul class="links">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Portfolio</a></li>
+          <li><a href="#">Contact Us</a></li>
+        </ul>
+        <div class="buttons">
+          <a href="#" class="signup" [routerLink]="['/login']">Connexion</a>
+        </div>
+      </nav>
+    </header>
+    <section class="hero-section">
+      <div class="hero">
+        <h2>Roulez vers l'Avenir </h2>
+        <p>
+            "Trouvez la route de vos rêves avec Gulel's car - Votre destination en ligne pour des voitures exceptionnelles, des opportunités inégalées, et des voyages mémorables sur quatre roues !"
+        </p>
+        <div class="buttons">
+          <a href="#" class="join">Rejoignez-nous</a>
+          <a href="#" class="learn">Decouvrir</a>
+        </div>
+      </div>
+    </section>
+    
+    
+</body>
+<div class="cartes m-5">
+    <h3 class="text-center"> Nos offres </h3>
+    <span class="soulignement"></span>
+   <div class="row row-gap-4">
+       <div class="col-md-4 col-12 " *ngFor="let voiture of voitures ">
+           <div class="card container-card">
+               <div class="wrapper">
+                   <div class="banner-image"> <img src="{{voiture.image}}" alt=""></div>
+                   <h3 class="text-dark"> {{voiture.marque}}</h3>
+                   <p class="text-dark">{{voiture.description}}</p>
+               </div>
+               <div class="button-wrapper">
+                   <button class="btn fill"  data-bs-toggle="modal" data-bs-target="#modalmodifVoiture">Achetez</button>
+      
+               </div>
+           </div>
+       </div>
+   </div>
+</div>
+</html>
