@@ -84,5 +84,7 @@ export class VoitureComponent implements OnInit {
     window.location.reload();
   }
 
+  
+
 
 }
